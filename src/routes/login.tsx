@@ -66,7 +66,7 @@ function LoginPage() {
       <div className="relative z-10 w-full max-w-4xl grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
         
         {/* Left Form Panel */}
-        <div className="md:col-span-7 bg-slate-900/80 border border-slate-800/80 backdrop-blur-xl rounded-2xl p-8 shadow-2xl flex flex-col justify-between">
+        <div className="md:col-span-7 bg-slate-900/80 border border-slate-800/80 backdrop-blur-xl rounded-2xl p-5 sm:p-8 shadow-2xl flex flex-col justify-between">
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="h-11 w-11 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center shadow-inner">

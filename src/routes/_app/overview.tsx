@@ -132,8 +132,12 @@ function OverviewPage() {
   // Modals & Panels UI State
   const [isGalleryOpen, setIsGalleryOpen] = useState<boolean>(false);
   const [isAIModalOpen, setIsAIModalOpen] = useState<boolean>(false);
-  const [isLayersCollapsed, setIsLayersCollapsed] = useState<boolean>(false);
-  const [isDetailsCollapsed, setIsDetailsCollapsed] = useState<boolean>(false);
+  const [isLayersCollapsed, setIsLayersCollapsed] = useState<boolean>(
+    () => typeof window !== "undefined" && window.innerWidth < 768
+  );
+  const [isDetailsCollapsed, setIsDetailsCollapsed] = useState<boolean>(
+    () => typeof window !== "undefined" && window.innerWidth < 640
+  );
 
   // Stored / Saved Georeferenced Snapshots
   const [savedSnapshots, setSavedSnapshots] = useState<SavedDroneSnapshot[]>([
