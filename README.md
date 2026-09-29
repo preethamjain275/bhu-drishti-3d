@@ -27,6 +27,10 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0B1220,0F766E,0EA5A4&height=220&section=header&text=BhuSetu&fontSize=72&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=From%20Fragmented%20Data%20to%20Verified%20Geospatial%20Intelligence&descAlignY=62&descSize=18" width="100%" />
 
+<br/>
+
+> 🎯 **For Tomorrow's Presentation:** Check out the complete presentation breakdown, elevator pitches, and human-readable feature cheat sheet in [**`README2.md`**](file:///c:/Users/DELL/Downloads/bhoom-main/bhoom-main/README2.md).
+
 </div>
 
 ---

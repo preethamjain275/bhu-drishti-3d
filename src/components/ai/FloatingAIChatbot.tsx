@@ -247,22 +247,22 @@ export function FloatingAIChatbot() {
   ];
 
   return (
-    <div className="fixed bottom-20 lg:bottom-6 right-6 z-50 font-sans">
+    <div className="fixed bottom-20 lg:bottom-6 right-3 sm:right-6 z-50 font-sans">
       {/* Trigger Button */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="group relative flex items-center gap-2.5 px-4 py-3 rounded-full bg-gradient-to-r from-teal-500 via-teal-600 to-indigo-600 text-slate-950 font-bold shadow-[0_0_25px_rgba(20,184,166,0.5)] hover:scale-105 transition-all duration-300 border border-teal-300/40 cursor-pointer"
+          className="group relative flex items-center gap-1.5 sm:gap-2.5 px-3 sm:px-4 py-2 sm:py-3 rounded-full bg-gradient-to-r from-teal-500 via-teal-600 to-indigo-600 text-slate-950 font-bold shadow-[0_0_25px_rgba(20,184,166,0.5)] hover:scale-105 transition-all duration-300 border border-teal-300/40 cursor-pointer"
         >
-          <Sparkles className="h-5 w-5 animate-pulse text-slate-950" />
-          <span className="text-xs uppercase tracking-wider font-extrabold text-slate-950">AI Copilot</span>
-          <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
+          <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 animate-pulse text-slate-950" />
+          <span className="text-[11px] sm:text-xs uppercase tracking-wider font-extrabold text-slate-950">AI Copilot</span>
+          <span className="flex h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-emerald-400 animate-ping" />
         </button>
       )}
 
       {/* Floating Chat Panel */}
       {isOpen && (
-        <div className="w-[360px] md:w-[420px] h-[540px] bg-slate-950/95 border border-teal-500/40 rounded-2xl shadow-2xl backdrop-blur-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+        <div className="w-[calc(100vw-1.5rem)] sm:w-[380px] md:w-[420px] h-[480px] sm:h-[540px] max-h-[75vh] bg-slate-950/95 border border-teal-500/40 rounded-2xl shadow-2xl backdrop-blur-2xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
           
           {/* Panel Header */}
           <div className="flex items-center justify-between px-4 py-3 bg-gradient-to-r from-slate-900 via-teal-950/50 to-slate-900 border-b border-slate-800">
