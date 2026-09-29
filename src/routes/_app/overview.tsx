@@ -318,10 +318,10 @@ function OverviewPage() {
     <div className="flex flex-col h-[calc(100vh-3.5rem)] w-full bg-[#030712] text-slate-100 overflow-hidden relative font-sans select-none">
       
       {/* ── 1. Top Sub-Header Bar with Key KPI Metrics ──────────────────────── */}
-      <div className="h-12 bg-slate-950/80 border-b border-slate-800/80 backdrop-blur-md px-4 flex items-center justify-between shrink-0 z-30 font-sans">
+      <div className="h-10 sm:h-12 bg-slate-950/80 border-b border-slate-800/80 backdrop-blur-md px-2 sm:px-4 flex items-center justify-between shrink-0 z-30 font-sans">
         
-        {/* Left: Overview Title */}
-        <div className="flex items-center gap-3">
+        {/* Left: Overview Title (Desktop only, mobile has breadcrumbs in TopBar) */}
+        <div className="hidden sm:flex items-center gap-3">
           <div className="flex items-center gap-2 text-white font-bold text-sm tracking-wide">
             <div className="h-6 w-6 rounded-lg bg-teal-500/20 border border-teal-500/40 flex items-center justify-center text-teal-400 shadow-sm">
               <LayersIcon className="h-3.5 w-3.5" />
@@ -330,12 +330,12 @@ function OverviewPage() {
           </div>
         </div>
 
-        {/* Center/Right: 4 Metric Badges */}
-        <div className="flex items-center gap-2.5 overflow-x-auto no-scrollbar py-1 text-xs font-mono">
+        {/* Center/Right: Metric Badges (Scrollable horizontally) */}
+        <div className="flex items-center gap-1.5 sm:gap-2.5 overflow-x-auto no-scrollbar py-1 text-xs font-mono w-full sm:w-auto">
           {/* Harmony Rate */}
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 shadow-sm">
-            <div className="relative h-5 w-5 flex items-center justify-center">
-              <svg className="h-5 w-5 -rotate-90" viewBox="0 0 36 36">
+          <div className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-slate-900/90 border border-slate-800 shadow-sm shrink-0">
+            <div className="relative h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center">
+              <svg className="h-4 w-4 sm:h-5 sm:w-5 -rotate-90" viewBox="0 0 36 36">
                 <path
                   d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
                   fill="none"
@@ -350,38 +350,38 @@ function OverviewPage() {
                   strokeDasharray="86, 100"
                 />
               </svg>
-              <span className="absolute text-[8px] font-bold text-emerald-400">86</span>
+              <span className="absolute text-[7px] sm:text-[8px] font-bold text-emerald-400">86</span>
             </div>
             <div>
-              <span className="font-bold text-white text-[11px]">86% harmony rate</span>
-              <span className="text-[9px] text-slate-400 block leading-tight font-sans">Across all sources</span>
+              <span className="font-bold text-white text-[10px] sm:text-[11px]">86% harmony</span>
+              <span className="text-[8px] sm:text-[9px] text-slate-400 hidden sm:block leading-tight font-sans">Across all sources</span>
             </div>
           </div>
 
           {/* Conflicts Detected */}
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 shadow-sm">
-            <div className="h-6 w-6 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400">
-              <Flame className="h-3.5 w-3.5 animate-pulse" />
+          <div className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-slate-900/90 border border-slate-800 shadow-sm shrink-0">
+            <div className="h-5 w-5 sm:h-6 sm:w-6 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400">
+              <Flame className="h-3 w-3 sm:h-3.5 sm:w-3.5 animate-pulse" />
             </div>
             <div>
-              <span className="font-bold text-red-400 text-[11px]">+12 today</span>
-              <span className="text-[9px] text-slate-400 block leading-tight font-sans">Conflicts detected</span>
+              <span className="font-bold text-red-400 text-[10px] sm:text-[11px]">+12 today</span>
+              <span className="text-[8px] sm:text-[9px] text-slate-400 hidden sm:block leading-tight font-sans">Conflicts detected</span>
             </div>
           </div>
 
           {/* Conflicts Resolved */}
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 shadow-sm">
-            <div className="h-6 w-6 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
-              <ArrowDownRight className="h-3.5 w-3.5" />
+          <div className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-slate-900/90 border border-slate-800 shadow-sm shrink-0">
+            <div className="h-5 w-5 sm:h-6 sm:w-6 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+              <ArrowDownRight className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
             </div>
             <div>
-              <span className="font-bold text-emerald-400 text-[11px]">-5 since yesterday</span>
-              <span className="text-[9px] text-slate-400 block leading-tight font-sans">Conflicts resolved</span>
+              <span className="font-bold text-emerald-400 text-[10px] sm:text-[11px]">-5 resolved</span>
+              <span className="text-[8px] sm:text-[9px] text-slate-400 hidden sm:block leading-tight font-sans">Conflicts resolved</span>
             </div>
           </div>
 
           {/* Weather info */}
-          <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 shadow-sm">
+          <div className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 shadow-sm shrink-0">
             <CloudSun className="h-4 w-4 text-amber-400" />
             <div>
               <span className="font-bold text-slate-200 text-[11px]">Bengaluru, KA</span>
@@ -653,7 +653,7 @@ function OverviewPage() {
 
         {/* ── 1. Top Drone Control Bar & Mode Toggles ─────────────────────────── */}
         <div
-          className="absolute top-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 px-3 py-1.5 rounded-2xl bg-slate-950/90 border border-slate-800 shadow-2xl backdrop-blur-xl"
+          className="absolute top-2 sm:top-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl sm:rounded-2xl bg-slate-950/95 border border-slate-800 shadow-2xl backdrop-blur-xl max-w-[calc(100vw-1rem)] overflow-x-auto no-scrollbar"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Drone HUD Master Switch */}
@@ -664,23 +664,24 @@ function OverviewPage() {
               showToast(next ? "🛸 Drone Recon Camera HUD Activated" : "Drone Recon HUD Deactivated");
             }}
             className={cn(
-              "flex items-center gap-2 px-3 py-1.5 rounded-xl font-mono text-xs font-black transition-all shadow-md cursor-pointer",
+              "flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl font-mono text-[11px] sm:text-xs font-black transition-all shadow-md cursor-pointer shrink-0",
               isDroneView
                 ? "bg-gradient-to-r from-teal-500 to-cyan-500 text-slate-950 shadow-teal-500/25 ring-2 ring-cyan-400"
                 : "bg-slate-900 border border-slate-800 text-slate-400 hover:text-white"
             )}
             title="Toggle Live Drone Recon Camera HUD"
           >
-            <Radio className={cn("h-3.5 w-3.5", isDroneView && "animate-pulse text-slate-950")} />
-            <span>{isDroneView ? "DRONE CAM ACTIVE" : "ENABLE DRONE CAM"}</span>
+            <Radio className={cn("h-3 w-3 sm:h-3.5 sm:w-3.5", isDroneView && "animate-pulse text-slate-950")} />
+            <span className="hidden sm:inline">{isDroneView ? "DRONE CAM ACTIVE" : "ENABLE DRONE CAM"}</span>
+            <span className="sm:hidden">{isDroneView ? "DRONE ON" : "DRONE"}</span>
           </button>
 
           {isDroneView && (
             <>
-              <div className="h-4 w-px bg-slate-800" />
+              <div className="h-4 w-px bg-slate-800 shrink-0" />
 
               {/* Flight Mode Pills */}
-              <div className="flex items-center gap-1 bg-slate-900/80 p-1 rounded-xl border border-slate-800/80 text-[11px] font-mono">
+              <div className="flex items-center gap-1 bg-slate-900/80 p-0.5 sm:p-1 rounded-lg sm:rounded-xl border border-slate-800/80 text-[10px] sm:text-[11px] font-mono shrink-0">
                 {(
                   [
                     { id: "FPV", label: "FPV Scan", icon: Navigation },
@@ -703,24 +704,25 @@ function OverviewPage() {
                         showToast(`Flight Mode: ${m.label}`);
                       }}
                       className={cn(
-                        "flex items-center gap-1.5 px-2.5 py-1 rounded-lg font-bold transition-all cursor-pointer",
+                        "flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg font-bold transition-all cursor-pointer whitespace-nowrap",
                         isActive
                           ? "bg-cyan-500/20 text-cyan-300 border border-cyan-400/50 shadow-sm"
                           : "text-slate-400 hover:text-slate-200 hover:bg-slate-800/60"
                       )}
                     >
-                      <Icon className={cn("h-3 w-3", isActive && "text-cyan-400")} />
-                      <span>{m.label}</span>
+                      <Icon className={cn("h-2.5 w-2.5 sm:h-3 sm:w-3", isActive && "text-cyan-400")} />
+                      <span className="hidden sm:inline">{m.label}</span>
+                      <span className="sm:hidden">{m.id}</span>
                     </button>
                   );
                 })}
               </div>
 
-              <div className="h-4 w-px bg-slate-800" />
+              <div className="h-4 w-px bg-slate-800 shrink-0" />
 
               {/* Altitude Quick Toggles */}
-              <div className="flex items-center gap-1 bg-slate-900/80 p-1 rounded-xl border border-slate-800/80 text-[10px] font-mono font-bold">
-                <span className="text-slate-500 px-1">ALT:</span>
+              <div className="flex items-center gap-1 bg-slate-900/80 p-0.5 sm:p-1 rounded-lg sm:rounded-xl border border-slate-800/80 text-[9px] sm:text-[10px] font-mono font-bold shrink-0">
+                <span className="text-slate-500 px-0.5 sm:px-1">ALT:</span>
                 {[45, 120, 250, 480].map((alt) => (
                   <button
                     key={alt}
@@ -729,7 +731,7 @@ function OverviewPage() {
                       showToast(`Drone Altitude set to ${alt}m AGL`);
                     }}
                     className={cn(
-                      "px-2 py-0.5 rounded transition cursor-pointer",
+                      "px-1.5 sm:px-2 py-0.5 rounded transition cursor-pointer",
                       droneAltitude === alt
                         ? "bg-teal-500 text-slate-950 font-black shadow"
                         : "text-slate-400 hover:text-white"
@@ -740,44 +742,44 @@ function OverviewPage() {
                 ))}
               </div>
 
-              <div className="h-4 w-px bg-slate-800" />
+              <div className="h-4 w-px bg-slate-800 shrink-0" />
 
               {/* Shutter Snapshot */}
               <button
                 onClick={handleCaptureSnapshot}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-mono text-xs font-black transition shadow-lg shadow-amber-500/20 active:scale-95 cursor-pointer"
+                className="flex items-center gap-1 sm:gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-mono text-[11px] sm:text-xs font-black transition shadow-lg shadow-amber-500/20 active:scale-95 cursor-pointer shrink-0"
                 title="Capture Georeferenced Orthophoto"
               >
-                <Camera className="h-3.5 w-3.5" />
+                <Camera className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                 <span>SNAP</span>
               </button>
 
               {/* Saved Snapshots Gallery */}
               <button
                 onClick={() => setIsGalleryOpen(true)}
-                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl bg-slate-900 border border-slate-700 hover:border-cyan-400 text-cyan-300 font-mono text-xs font-bold transition shadow-sm cursor-pointer"
+                className="flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg sm:rounded-xl bg-slate-900 border border-slate-700 hover:border-cyan-400 text-cyan-300 font-mono text-[11px] sm:text-xs font-bold transition shadow-sm cursor-pointer shrink-0"
                 title="View Saved Drone Snapshots Gallery"
               >
-                <FolderOpen className="h-3.5 w-3.5 text-cyan-400" />
+                <FolderOpen className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-cyan-400" />
                 <span>SAVED ({savedSnapshots.length})</span>
               </button>
             </>
           )}
 
           {/* Lighting Mode Selector */}
-          <div className="flex items-center gap-1 bg-slate-900/80 border border-slate-800 p-1 rounded-xl">
+          <div className="flex items-center gap-0.5 sm:gap-1 bg-slate-900/80 border border-slate-800 p-0.5 sm:p-1 rounded-lg sm:rounded-xl shrink-0">
             <button
               onClick={() => {
                 setTimeOfDay("DAY");
                 showToast("☀️ Daytime Sunlight Lighting Activated");
               }}
               className={cn(
-                "p-1.5 rounded-lg transition cursor-pointer",
+                "p-1 sm:p-1.5 rounded-md sm:rounded-lg transition cursor-pointer",
                 timeOfDay === "DAY" ? "bg-amber-500/20 text-amber-300 border border-amber-500/40" : "text-slate-400 hover:text-white"
               )}
               title="Daytime Sun Lighting"
             >
-              <Sun className="h-3.5 w-3.5" />
+              <Sun className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
             </button>
             <button
               onClick={() => {
@@ -785,12 +787,12 @@ function OverviewPage() {
                 showToast("🌅 Dusk Twilight Golden Hour Activated");
               }}
               className={cn(
-                "p-1.5 rounded-lg transition cursor-pointer",
+                "p-1 sm:p-1.5 rounded-md sm:rounded-lg transition cursor-pointer",
                 timeOfDay === "DUSK" ? "bg-rose-500/20 text-rose-300 border border-rose-500/40" : "text-slate-400 hover:text-white"
               )}
               title="Dusk Twilight Golden Hour"
             >
-              <Sunset className="h-3.5 w-3.5" />
+              <Sunset className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
             </button>
             <button
               onClick={() => {
@@ -798,12 +800,12 @@ function OverviewPage() {
                 showToast("🌙 Night Cyber Grid Activated");
               }}
               className={cn(
-                "p-1.5 rounded-lg transition cursor-pointer",
+                "p-1 sm:p-1.5 rounded-md sm:rounded-lg transition cursor-pointer",
                 timeOfDay === "NIGHT" ? "bg-cyan-500/20 text-cyan-300 border border-cyan-500/40" : "text-slate-400 hover:text-white"
               )}
               title="Night Digital Twin Grid"
             >
-              <Moon className="h-3.5 w-3.5" />
+              <Moon className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
             </button>
           </div>
         </div>
@@ -837,8 +839,8 @@ function OverviewPage() {
             <div className="absolute bottom-16 left-5 w-12 h-12 border-b-2 border-l-2 border-cyan-400/80" />
             <div className="absolute bottom-16 right-5 w-12 h-12 border-b-2 border-r-2 border-cyan-400/80" />
 
-            {/* Top HUD Telemetry Banner */}
-            <div className="absolute top-20 left-8 flex items-center gap-4 text-xs font-bold text-cyan-300 drop-shadow-md">
+            {/* Top HUD Telemetry Banner (Desktop) */}
+            <div className="hidden md:flex absolute top-20 left-8 items-center gap-4 text-xs font-bold text-cyan-300 drop-shadow-md">
               {/* Flashing Recording Dot */}
               <div className="flex items-center gap-2 bg-slate-950/80 border border-slate-800 px-3 py-1 rounded-xl">
                 <span className="h-2.5 w-2.5 rounded-full bg-red-500 animate-ping" />
@@ -863,50 +865,62 @@ function OverviewPage() {
               </div>
             </div>
 
+            {/* Mobile Bottom Compact Telemetry Badge */}
+            <div className="md:hidden absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 bg-slate-950/90 border border-slate-800 px-3 py-1 rounded-full text-[9px] font-mono text-cyan-300 shadow-2xl backdrop-blur-md whitespace-nowrap">
+              <span className="h-2 w-2 rounded-full bg-red-500 animate-pulse" />
+              <span>REC 4K</span>
+              <span className="text-slate-600">•</span>
+              <span className="text-emerald-400">RTK FIX 0.02m</span>
+              <span className="text-slate-600">•</span>
+              <span className="text-teal-300 font-bold">{droneAltitude}m AGL</span>
+              <span className="text-slate-600">•</span>
+              <span className="text-amber-300">18.4 km/h</span>
+            </div>
+
             {/* Center Tactical Flight Crosshair & Rangefinder */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="relative flex items-center justify-center">
                 {/* Outer Cyan Horizon Ring */}
                 <div
-                  className="w-48 h-48 rounded-full border border-cyan-400/30 flex items-center justify-center transition-transform duration-300"
+                  className="w-32 h-32 sm:w-48 sm:h-48 rounded-full border border-cyan-400/30 flex items-center justify-center transition-transform duration-300"
                   style={{ transform: `rotate(${orbitAngle}deg)` }}
                 >
-                  <span className="absolute top-1 font-mono text-[9px] text-cyan-300 font-black">N</span>
-                  <span className="absolute right-1 font-mono text-[9px] text-cyan-300 font-bold">E</span>
-                  <span className="absolute bottom-1 font-mono text-[9px] text-cyan-300 font-bold">S</span>
-                  <span className="absolute left-1 font-mono text-[9px] text-cyan-300 font-bold">W</span>
+                  <span className="absolute top-1 font-mono text-[8px] sm:text-[9px] text-cyan-300 font-black">N</span>
+                  <span className="absolute right-1 font-mono text-[8px] sm:text-[9px] text-cyan-300 font-bold">E</span>
+                  <span className="absolute bottom-1 font-mono text-[8px] sm:text-[9px] text-cyan-300 font-bold">S</span>
+                  <span className="absolute left-1 font-mono text-[8px] sm:text-[9px] text-cyan-300 font-bold">W</span>
                   <div className="w-full h-px bg-cyan-400/20" />
                   <div className="h-full w-px bg-cyan-400/20 absolute" />
                 </div>
 
                 {/* Artificial Horizon Pitch Ladder */}
-                <div className="absolute flex flex-col items-center gap-3 opacity-60">
-                  <div className="w-16 h-0.5 bg-cyan-400 flex justify-between px-1 text-[8px] text-cyan-300">
+                <div className="absolute flex flex-col items-center gap-2 sm:gap-3 opacity-60">
+                  <div className="w-12 sm:w-16 h-0.5 bg-cyan-400 flex justify-between px-1 text-[7px] sm:text-[8px] text-cyan-300">
                     <span>+10</span>
                     <span>+10</span>
                   </div>
-                  <div className="w-24 h-0.5 bg-cyan-300" />
-                  <div className="w-16 h-0.5 bg-cyan-400 flex justify-between px-1 text-[8px] text-cyan-300">
+                  <div className="w-16 sm:w-24 h-0.5 bg-cyan-300" />
+                  <div className="w-12 sm:w-16 h-0.5 bg-cyan-400 flex justify-between px-1 text-[7px] sm:text-[8px] text-cyan-300">
                     <span>-10</span>
                     <span>-10</span>
                   </div>
                 </div>
 
                 {/* Center Target Box */}
-                <div className="w-10 h-10 border border-cyan-400 rounded flex items-center justify-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 border border-cyan-400 rounded flex items-center justify-center">
                   <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
                 </div>
 
                 {/* Live Laser Rangefinder Readout */}
-                <div className="absolute top-28 bg-slate-950/90 border border-cyan-400/60 px-2.5 py-1 rounded-md text-[10px] font-black text-cyan-300 shadow-xl flex items-center gap-1.5">
-                  <Crosshair className="h-3 w-3 text-cyan-400" />
+                <div className="absolute top-20 sm:top-28 bg-slate-950/90 border border-cyan-400/60 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-md text-[9px] sm:text-[10px] font-black text-cyan-300 shadow-xl flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+                  <Crosshair className="h-2.5 w-2.5 sm:h-3 sm:w-3 text-cyan-400" />
                   <span>LASER LOCK: 84.6m · GIMBAL {gimbalPitch}°</span>
                 </div>
               </div>
             </div>
 
-            {/* Left Vertical Flight Gauge (Altitude Tape) */}
-            <div className="absolute left-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2 bg-slate-950/80 border border-slate-800 p-3 rounded-2xl pointer-events-auto">
+            {/* Left Vertical Flight Gauge (Altitude Tape) - Hidden on Mobile */}
+            <div className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2 flex-col items-center gap-2 bg-slate-950/80 border border-slate-800 p-3 rounded-2xl pointer-events-auto">
               <span className="text-[10px] font-black text-teal-400">ALT (m)</span>
               <div className="h-36 w-2 bg-slate-800 rounded-full overflow-hidden flex flex-col justify-end p-0.5">
                 <div
@@ -917,8 +931,8 @@ function OverviewPage() {
               <span className="font-mono text-xs font-black text-white">{droneAltitude}m</span>
             </div>
 
-            {/* Right Vertical Flight Gauge (Speed & Pitch Tape) */}
-            <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2 bg-slate-950/80 border border-slate-800 p-3 rounded-2xl pointer-events-auto">
+            {/* Right Vertical Flight Gauge (Speed & Pitch Tape) - Hidden on Mobile */}
+            <div className="hidden md:flex absolute right-8 top-1/2 -translate-y-1/2 flex-col items-center gap-2 bg-slate-950/80 border border-slate-800 p-3 rounded-2xl pointer-events-auto">
               <span className="text-[10px] font-black text-cyan-400">SPEED</span>
               <div className="h-36 w-2 bg-slate-800 rounded-full overflow-hidden flex flex-col justify-end p-0.5">
                 <div className="w-full bg-cyan-400 rounded-full h-1/2" />

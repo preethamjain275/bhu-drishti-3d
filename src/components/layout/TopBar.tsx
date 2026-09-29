@@ -309,11 +309,11 @@ function LanguageDropdown() {
       <DropdownMenuTrigger asChild>
         <button
           type="button"
-          className="flex items-center gap-1.5 rounded-lg border border-teal-500/30 bg-surface/90 px-3 py-1.5 text-xs font-semibold text-slate-200 transition-colors hover:border-teal-400 hover:text-white"
+          className="flex items-center gap-1 sm:gap-1.5 rounded-lg border border-teal-500/30 bg-surface/90 px-2 sm:px-3 py-1 sm:py-1.5 text-xs font-semibold text-slate-200 transition-colors hover:border-teal-400 hover:text-white"
         >
-          <span>{currentLang.flag}</span>
-          <span className="font-medium text-teal-300">{currentLang.nativeName} ({currentLang.code.toUpperCase()})</span>
-          <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
+          <span className="text-sm">{currentLang.flag}</span>
+          <span className="hidden sm:inline font-medium text-teal-300">{currentLang.nativeName} ({currentLang.code.toUpperCase()})</span>
+          <ChevronDown className="h-3 w-3 sm:h-3.5 sm:w-3.5 text-muted-foreground" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-48">
