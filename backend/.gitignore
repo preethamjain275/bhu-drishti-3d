@@ -1,0 +1,12 @@
+# Ignore uploaded user data & temporary files
+data/uploads/*
+!data/uploads/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/temp/*
+!data/temp/.gitkeep
+
+__pycache__/
+*.pyc
+.pytest_cache/
+.env

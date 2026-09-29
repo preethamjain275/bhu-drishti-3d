@@ -1,0 +1,34 @@
+# BHOO-MITRA AI — Backend Dependencies
+# Phase 16: GDAL + PROJ + GeoPandas Geospatial Processing Foundation
+
+# ── Core API Framework ────────────────────────────────────────────────────────
+fastapi>=0.110.0
+uvicorn>=0.28.0
+python-multipart>=0.0.9
+
+# ── Data Validation ───────────────────────────────────────────────────────────
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
+
+# ── Configuration ─────────────────────────────────────────────────────────────
+python-dotenv>=1.0.1
+
+# ── HTTP Client ───────────────────────────────────────────────────────────────
+httpx>=0.27.0
+
+# ── Database: SQLAlchemy 2.x + PostGIS ────────────────────────────────────────
+sqlalchemy>=2.0.0
+geoalchemy2>=0.14.0
+psycopg2-binary>=2.9.0          # PostgreSQL driver (binary for easy install)
+
+# ── Geospatial Engine ─────────────────────────────────────────────────────────
+shapely>=2.0.0                   # Geometry manipulation & spatial predicates
+pyproj>=3.6.0                    # Coordinate transformations (PROJ)
+geopandas>=0.14.0                # Vector dataset processing
+
+# ── Migrations ────────────────────────────────────────────────────────────────
+alembic>=1.13.0
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest>=8.0.0
+pytest-asyncio>=0.23.0

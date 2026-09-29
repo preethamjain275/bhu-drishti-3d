@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="bhu-fav-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00ffff" />
+      <stop offset="100%" stop-color="#3fb8b0" />
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="10" fill="#0f172a" />
+  <path d="M24 8 L39 16 V32 L24 40 L9 32 V16 Z" fill="none" stroke="url(#bhu-fav-grad)" stroke-width="2.5" stroke-linejoin="round" />
+  <path d="M14 28 C18 20 30 20 34 28" fill="none" stroke="#f1f5f9" stroke-width="2" stroke-linecap="round" />
+  <circle cx="14" cy="28" r="2.5" fill="#00ffff" />
+  <circle cx="34" cy="28" r="2.5" fill="#00ffff" />
+  <circle cx="24" cy="20" r="3" fill="#fbbf24" />
+</svg>

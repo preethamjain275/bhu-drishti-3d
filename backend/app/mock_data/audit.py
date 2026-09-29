@@ -1,0 +1,28 @@
+SYNTHETIC_AUDIT_EVENTS = [
+    {
+        "id": "AUD-001",
+        "timestamp": "2026-09-25T14:30:00Z",
+        "actorId": "USR-OFFICER-01",
+        "actorName": "Rajesh Kumar",
+        "actorRole": "Senior Revenue Officer",
+        "action": "RECOMMENDATION_APPROVED",
+        "module": "Verification",
+        "entityId": "CANONICAL-014",
+        "recommendationId": "REC-014",
+        "verificationId": "VER-101",
+        "reason": "Officer verified GNSS ground survey boundary vector (2,465 m²) for parcel PARCEL-DEMO-014.",
+        "metadata": {"reviewer": "Rajesh Kumar", "confidence": 98.4},
+    },
+    {
+        "id": "AUD-002",
+        "timestamp": "2026-09-24T16:20:00Z",
+        "actorId": "USR-OFFICER-01",
+        "actorName": "Rajesh Kumar",
+        "actorRole": "Senior Revenue Officer",
+        "action": "SOURCE_IMPORTED",
+        "module": "Sources",
+        "sourceId": "MUNI-GIS-WARD18",
+        "reason": "Ingested municipal cadastral vector dataset municipal_parcels.geojson.",
+        "metadata": {"crs": "EPSG:4326", "featureCount": 18240},
+    },
+]

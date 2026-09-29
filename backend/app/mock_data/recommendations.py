@@ -1,0 +1,26 @@
+SYNTHETIC_RECOMMENDATIONS_DATA = [
+    {
+        "id": "REC-014",
+        "entityId": "CANONICAL-014",
+        "parcelId": "PARCEL-DEMO-014",
+        "proposedBoundarySource": "SURVEY-2025-SP2291",
+        "proposedLandUse": "Residential - Mixed",
+        "confidence": 98.4,
+        "supportingEvidenceIds": ["EVID-SURV-SP2291", "EVID-GEOM-014", "EVID-DEED-98102"],
+        "unresolvedItems": ["Tax arrear reconciliation (2023-24)"],
+        "status": "PENDING_VERIFICATION",
+        "reasoning": "Adopt GNSS Survey SP-2291 boundary vector (2,465 m²) as primary spatial geometry due to sub-centimeter accuracy (±0.02m). Retain legal deed owner Devi Sharan & Sons from Sub-Registrar IX index.",
+    },
+    {
+        "id": "REC-018",
+        "entityId": "CANONICAL-018",
+        "parcelId": "PARCEL-DEMO-018",
+        "proposedBoundarySource": "MUNI-GIS-WARD18",
+        "proposedLandUse": "Commercial C-2",
+        "confidence": 88.0,
+        "supportingEvidenceIds": ["EVID-PLAN-ZONE41"],
+        "unresolvedItems": ["Front setback verification against Master Plan 2041"],
+        "status": "PENDING_VERIFICATION",
+        "reasoning": "Commercial C-2 zoning gazette notification confirmed by DDA Master Plan 2041 schedule.",
+    },
+]

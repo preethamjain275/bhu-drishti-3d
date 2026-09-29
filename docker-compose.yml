@@ -1,0 +1,48 @@
+version: "3.8"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# BHOO-MITRA AI — Development Docker Compose
+#
+# Starts a PostGIS-enabled PostgreSQL instance for local development.
+#
+# Usage:
+#   docker-compose up -d           # start in background
+#   docker-compose down            # stop & remove containers
+#   docker-compose down -v         # stop & remove containers + volumes (full reset)
+#
+# After starting:
+#   cd backend
+#   alembic upgrade head            # run migrations
+#   python -m app.db.seed           # seed synthetic demo data
+#
+# WARNING: These are development-only credentials.
+#          Never use these in production.
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+  postgres:
+    image: postgis/postgis:15-3.3
+    container_name: bhoomitra-postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-bhoomitra_db}
+      POSTGRES_USER: ${POSTGRES_USER:-bhoomitra_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bhoomitra_pass}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${POSTGRES_USER:-bhoomitra_user} -d ${POSTGRES_DB:-bhoomitra_db}",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+volumes:
+  postgres_data:
+    driver: local
