@@ -125,75 +125,75 @@ function LandingPage() {
       <BhooMitraHero />
 
       {/* ── 3. Scroll-Driven 5-Stage Harmonization Workflow Showcase ─────────── */}
-      <section id="how-it-works" className="relative z-10 mx-auto max-w-7xl px-4 py-16 md:px-6 md:py-24 border-t border-slate-800/80">
+      <section id="how-it-works" className="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:py-12 border-t border-slate-800/80">
         
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10 space-y-2">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 font-mono text-xs font-bold uppercase">
             <GitMerge className="h-3.5 w-3.5" />
             <span>End-to-End Harmonization Pipeline</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-white tracking-tight">
             How BHU-DRISHTI Resolves Land Discrepancies
           </h2>
-          <p className="text-sm text-slate-400 font-sans leading-relaxed">
+          <p className="text-xs sm:text-sm text-slate-400 font-sans leading-relaxed">
             From multi-source data ingestion to transparent AI conflict detection and immutable officer verification.
           </p>
         </div>
 
         {/* 5-Step Pipeline Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4">
           
           {/* Step 1 */}
-          <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-cyan-500/40 transition-all space-y-2">
-            <div className="h-8 w-8 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold font-mono text-xs">
+          <div className="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-cyan-500/40 transition-all space-y-1.5">
+            <div className="h-7 w-7 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-bold font-mono text-xs">
               01
             </div>
-            <h3 className="font-bold text-sm text-white">Multi-Source Ingest</h3>
-            <p className="text-xs text-slate-400 leading-relaxed font-sans">
+            <h3 className="font-bold text-xs sm:text-sm text-white">Multi-Source Ingest</h3>
+            <p className="text-[11px] text-slate-400 leading-relaxed font-sans">
               Ingests Revenue cadastre, Municipal GIS vectors, and Drone orthophotos into standardized CRS EPSG:32643.
             </p>
           </div>
 
           {/* Step 2 */}
-          <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-teal-500/40 transition-all space-y-2">
-            <div className="h-8 w-8 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold font-mono text-xs">
+          <div className="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-teal-500/40 transition-all space-y-1.5">
+            <div className="h-7 w-7 rounded-lg bg-teal-500/10 border border-teal-500/30 flex items-center justify-center text-teal-400 font-bold font-mono text-xs">
               02
             </div>
-            <h3 className="font-bold text-sm text-white">Entity Matching</h3>
-            <p className="text-xs text-slate-400 leading-relaxed font-sans">
+            <h3 className="font-bold text-xs sm:text-sm text-white">Entity Matching</h3>
+            <p className="text-[11px] text-slate-400 leading-relaxed font-sans">
               Matches parcels across differing legacy schema using IoU polygon overlap, topological Hausdorff metrics, and fuzzy address tags.
             </p>
           </div>
 
           {/* Step 3 */}
-          <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-red-500/40 transition-all space-y-2">
-            <div className="h-8 w-8 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 font-bold font-mono text-xs">
+          <div className="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-red-500/40 transition-all space-y-1.5">
+            <div className="h-7 w-7 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center justify-center text-red-400 font-bold font-mono text-xs">
               03
             </div>
-            <h3 className="font-bold text-sm text-white">Conflict Detection</h3>
-            <p className="text-xs text-slate-400 leading-relaxed font-sans">
+            <h3 className="font-bold text-xs sm:text-sm text-white">Conflict Detection</h3>
+            <p className="text-[11px] text-slate-400 leading-relaxed font-sans">
               Flags spatial discrepancies, area variations (25 m²), boundary overlaps, and building setback violations in 3D.
             </p>
           </div>
 
           {/* Step 4 */}
-          <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-purple-500/40 transition-all space-y-2">
-            <div className="h-8 w-8 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold font-mono text-xs">
+          <div className="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-purple-500/40 transition-all space-y-1.5">
+            <div className="h-7 w-7 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold font-mono text-xs">
               04
             </div>
-            <h3 className="font-bold text-sm text-white">AI Synthesis</h3>
-            <p className="text-xs text-slate-400 leading-relaxed font-sans">
+            <h3 className="font-bold text-xs sm:text-sm text-white">AI Synthesis</h3>
+            <p className="text-[11px] text-slate-400 leading-relaxed font-sans">
               AI evaluates temporal confidence, sensor GSD precision, and legal precedents to recommend a candidate spatial truth.
             </p>
           </div>
 
           {/* Step 5 */}
-          <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-emerald-500/40 transition-all space-y-2">
-            <div className="h-8 w-8 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold font-mono text-xs">
+          <div className="p-3.5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-emerald-500/40 transition-all space-y-1.5">
+            <div className="h-7 w-7 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold font-mono text-xs">
               05
             </div>
-            <h3 className="font-bold text-sm text-white">Human Sign-off</h3>
-            <p className="text-xs text-slate-400 leading-relaxed font-sans">
+            <h3 className="font-bold text-xs sm:text-sm text-white">Human Sign-off</h3>
+            <p className="text-[11px] text-slate-400 leading-relaxed font-sans">
               Officer verifies (`Accept` / `Modify` / `Reject`), digitally signs the dossier, and commits to an immutable audit ledger.
             </p>
           </div>
@@ -203,14 +203,14 @@ function LandingPage() {
       </section>
 
       {/* ── 4. Bottom Hero CTA ────────────────────────────────────────────── */}
-      <section className="relative z-10 mx-auto max-w-7xl px-4 py-12 md:px-6 md:py-16 text-center">
-        <div className="rounded-3xl border border-teal-500/30 bg-gradient-to-b from-slate-900/90 to-slate-950/95 p-8 md:p-12 shadow-[0_0_60px_rgba(20,184,166,0.15)] backdrop-blur-2xl space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/40 bg-teal-500/10 px-4 py-1 font-mono text-xs font-bold text-teal-300">
+      <section className="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:py-12 text-center">
+        <div className="rounded-3xl border border-teal-500/30 bg-gradient-to-b from-slate-900/90 to-slate-950/95 p-6 sm:p-10 shadow-[0_0_60px_rgba(20,184,166,0.15)] backdrop-blur-2xl space-y-4 sm:space-y-5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/40 bg-teal-500/10 px-3.5 py-1 font-mono text-xs font-bold text-teal-300">
             <Box className="h-4 w-4 text-teal-400" />
             <span>ENTER THE URBAN DIGITAL TWIN</span>
           </div>
 
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight">
             Ready to Experience Autonomous
             <br />
             <span className="bg-gradient-to-r from-teal-400 to-cyan-300 bg-clip-text text-transparent">
@@ -218,26 +218,26 @@ function LandingPage() {
             </span>
           </h2>
 
-          <p className="max-w-xl mx-auto text-sm sm:text-base text-slate-300 font-sans leading-relaxed">
+          <p className="max-w-xl mx-auto text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
             Ingest multi-source cadastre, detect parcel deviations, explore exploded BIM interiors, and certify legally harmonized land records.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
             <Button
               asChild
-              size="lg"
-              className="bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold text-sm px-8 py-6 rounded-xl shadow-lg shadow-teal-500/30 transition cursor-pointer"
+              size="default"
+              className="bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold text-xs px-6 py-5 rounded-xl shadow-lg shadow-teal-500/30 transition cursor-pointer"
             >
               <Link to={isAuthenticated ? "/intelligence-3d" : "/login"}>
-                <Box className="mr-2 h-5 w-5" /> {isAuthenticated ? "LAUNCH 3D INTELLIGENCE" : "SIGN IN / ENTER 3D TWIN"}
+                <Box className="mr-2 h-4 w-4" /> {isAuthenticated ? "LAUNCH 3D INTELLIGENCE" : "SIGN IN / ENTER 3D TWIN"}
               </Link>
             </Button>
 
             <Button
               asChild
-              size="lg"
+              size="default"
               variant="outline"
-              className="border-slate-700 bg-slate-900/80 hover:bg-slate-850 text-slate-200 font-bold text-sm px-8 py-6 rounded-xl transition cursor-pointer"
+              className="border-slate-700 bg-slate-900/80 hover:bg-slate-800 text-slate-200 font-bold text-xs px-6 py-5 rounded-xl transition cursor-pointer"
             >
               <Link to={isAuthenticated ? "/overview" : "/login"}>
                 <Workflow className="mr-2 h-4 w-4 text-teal-400" /> OPEN COMMAND WORKSPACE

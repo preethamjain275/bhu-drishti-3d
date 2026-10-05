@@ -56,34 +56,34 @@ function LoginPage() {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center bg-slate-950 px-4 py-12 text-slate-100 overflow-hidden">
+    <div className="relative min-h-[100dvh] flex items-center justify-center bg-slate-950 px-3 sm:px-6 py-4 sm:py-6 text-slate-100">
       {/* Background GIS Grid & Radar Radial Animation */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-900/20 via-slate-950 to-slate-950" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-900/20 via-slate-950 to-slate-950 pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
       {/* Floating Animated Radar Pulsar */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-teal-500/10 animate-ping opacity-25 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full border border-teal-500/10 animate-ping opacity-20 pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-4xl grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+      <div className="relative z-10 w-full max-w-4xl grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-5 items-stretch my-auto">
         
         {/* Left Form Panel */}
-        <div className="md:col-span-7 bg-slate-900/80 border border-slate-800/80 backdrop-blur-xl rounded-2xl p-5 sm:p-8 shadow-2xl flex flex-col justify-between">
+        <div className="md:col-span-7 bg-slate-900/85 border border-slate-800/90 backdrop-blur-xl rounded-2xl p-4 sm:p-6 shadow-2xl flex flex-col justify-between">
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-11 w-11 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center shadow-inner">
-                <BhuSetuMark className="h-8 w-8" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-10 w-10 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-center shadow-inner">
+                <BhuSetuMark className="h-7 w-7" />
               </div>
               <div>
-                <h1 className="font-display font-black text-xl text-white tracking-wide flex items-center gap-1.5">
-                  BHU-DRISHTI <span className="text-teal-400 font-mono text-sm px-1.5 py-0.5 rounded bg-teal-500/20 border border-teal-400/30">3D</span>
+                <h1 className="font-display font-black text-lg sm:text-xl text-white tracking-wide flex items-center gap-1.5">
+                  BHU-DRISHTI <span className="text-teal-400 font-mono text-xs px-1.5 py-0.5 rounded bg-teal-500/20 border border-teal-400/30">3D</span>
                 </h1>
-                <p className="text-xs text-teal-400 font-mono tracking-wider uppercase font-semibold">National Land Intelligence Platform</p>
+                <p className="text-[10px] sm:text-xs text-teal-400 font-mono tracking-wider uppercase font-semibold">National Land Intelligence Platform</p>
               </div>
             </div>
 
-            <div className="mb-6">
-              <h2 className="text-lg font-semibold text-slate-100">Sign in to your account</h2>
-              <p className="text-xs text-slate-400 mt-1">
+            <div className="mb-4">
+              <h2 className="text-base sm:text-lg font-semibold text-slate-100">Sign in to your account</h2>
+              <p className="text-xs text-slate-400 mt-0.5">
                 Secure Government Decision-Support Environment (Auth & RBAC Enforced)
               </p>
             </div>

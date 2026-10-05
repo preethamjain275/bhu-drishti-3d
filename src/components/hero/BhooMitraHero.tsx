@@ -45,7 +45,7 @@ export function BhooMitraHero() {
   const harmonizationTarget = isAuthenticated ? "/harmonization" : "/login";
 
   return (
-    <section className="relative min-h-[88vh] lg:min-h-[90vh] w-full overflow-hidden flex flex-col justify-between pt-6 pb-10 px-4 md:px-8 font-sans select-none">
+    <section className="relative w-full overflow-hidden flex flex-col items-center justify-center py-6 sm:py-10 lg:py-14 gap-5 sm:gap-6 px-4 md:px-8 font-sans select-none">
       
       {/* ── 1. 100% High-Clarity Crisp Video Background (No Blur, Full Brightness) ── */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
@@ -84,7 +84,7 @@ export function BhooMitraHero() {
       </div>
 
       {/* ── 3. Central Heroic Copy & Clean Resized Headline ──────────────────── */}
-      <div className="relative z-10 mx-auto max-w-4xl text-center space-y-4 my-auto pt-2">
+      <div className="relative z-10 mx-auto max-w-4xl text-center space-y-3">
         
         {/* Sub-label */}
         <div className="flex items-center justify-center gap-1.5 font-mono text-[11px] font-bold tracking-wider text-cyan-300 uppercase">
@@ -173,7 +173,7 @@ export function BhooMitraHero() {
       </div>
 
       {/* ── 4. Bottom Live Intelligence HUD Cards (Compact & Glassmorphic) ─── */}
-      <div className="relative z-10 mx-auto w-full max-w-5xl pt-4">
+      <div className="relative z-10 mx-auto w-full max-w-5xl">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 font-mono">
           
           {/* Card 1 */}
