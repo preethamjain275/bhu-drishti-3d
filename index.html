@@ -22,14 +22,19 @@
   <body class="bg-background text-foreground antialiased selection:bg-teal-500/30 selection:text-teal-200">
     <div id="root"></div>
     <script>
-      // Register Service Worker for PWA with live update check
+      // Force unregister stale SW caches to guarantee live deployment updates immediately
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').then((reg) => {
-            reg.update();
-          }).catch((err) => {
-            console.debug('SW registration skipped:', err);
-          });
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for (let registration of registrations) {
+            registration.unregister();
+          }
+        });
+      }
+      if ('caches' in window) {
+        caches.keys().then(function(names) {
+          for (let name of names) {
+            caches.delete(name);
+          }
         });
       }
     </script>
