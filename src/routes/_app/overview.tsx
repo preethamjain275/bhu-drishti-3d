@@ -976,7 +976,7 @@ function OverviewPage() {
 
           <svg
             viewBox="0 0 1200 700"
-            className="w-full h-full overflow-visible select-none"
+            className="w-full h-full min-w-full min-h-full object-cover select-none"
             preserveAspectRatio="xMidYMid slice"
           >
             <defs>

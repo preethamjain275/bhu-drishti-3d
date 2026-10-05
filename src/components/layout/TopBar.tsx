@@ -165,56 +165,15 @@ export function TopBar({ onOpenCommand }: { onOpenCommand: () => void }) {
       </div>
 
       {/* Right Actions & User Controls */}
-      <div className="flex items-center gap-2 shrink-0">
+      <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">
         
-        {/* 7-Stage Workflow Stepper */}
-        <div className="hidden 2xl:flex items-center gap-1 px-3 py-1 bg-surface/80 border border-border/80 rounded-full font-mono text-[10px]">
-          {workflowSteps.map((step, idx) => {
-            const isActive = activeStage === step.key;
-            return (
-              <React.Fragment key={step.key}>
-                <Link
-                  to={step.to}
-                  className={cn(
-                    "px-2 py-0.5 rounded-full transition-all duration-300 flex items-center gap-1 font-bold",
-                    isActive
-                      ? "bg-teal-500/20 border border-teal-400/50 text-teal-300 shadow-sm"
-                      : "text-muted-foreground hover:text-ivory hover:bg-white/5"
-                  )}
-                >
-                  {isActive && <span className="h-1.5 w-1.5 rounded-full bg-teal-400 animate-pulse" />}
-                  {step.label}
-                </Link>
-                {idx < workflowSteps.length - 1 && (
-                  <span className="text-slate-600 text-[9px]">→</span>
-                )}
-              </React.Fragment>
-            );
-          })}
-        </div>
-
-        {/* PWA Install Button */}
-        <div className="hidden sm:block">
-          <PWAInstallButton variant="compact" />
-        </div>
-
-        {/* Global Drone View Quick Link / Toggle */}
-        <Link
-          to="/intelligence-3d"
-          className="hidden sm:flex items-center gap-1.5 rounded-xl border border-cyan-500/40 bg-cyan-950/30 px-2.5 py-1.5 transition-colors hover:border-cyan-400 hover:bg-cyan-950/50 text-cyan-300 font-mono text-xs font-bold shadow-sm"
-          title="Switch to 3D Drone Recon & Urban Digital Twin"
-        >
-          <Radio className="h-3.5 w-3.5 text-cyan-400 animate-pulse" />
-          <span>DRONE RECON 3D</span>
-        </Link>
-
-        {/* System Status Badge */}
+        {/* Compact Live Status Indicator */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <button className="hidden sm:flex items-center gap-1.5 rounded-xl border border-verified/40 bg-emerald-950/30 px-2.5 py-1.5 transition-colors hover:border-verified">
+            <button className="hidden sm:flex items-center gap-1.5 rounded-xl border border-verified/30 bg-emerald-950/20 px-2.5 py-1.5 transition-colors hover:border-verified/60 cursor-pointer">
               <span className="h-2 w-2 rounded-full bg-verified shadow-[0_0_8px_rgba(34,197,94,0.8)] animate-pulse" />
-              <span className="label-technical text-xs font-bold uppercase text-verified">
-                LIVE PLATFORM
+              <span className="text-[11px] font-mono font-bold uppercase text-emerald-400">
+                LIVE
               </span>
             </button>
           </DropdownMenuTrigger>
@@ -230,9 +189,9 @@ export function TopBar({ onOpenCommand }: { onOpenCommand: () => void }) {
             </DropdownMenuLabel>
             <DropdownMenuSeparator className="bg-slate-800" />
             <div className="grid gap-2 p-2.5 text-xs">
-              <StatusRow label="FastAPI REST API" value="Operational (FastAPI Engine Sync)" ok={true} />
-              <StatusRow label="Spatial Processing Engine" value="Operational (PostGIS + GDAL)" ok={true} />
-              <StatusRow label="Conflict Detection Pipeline" value="Operational (GeoAI Classifier)" ok={true} />
+              <StatusRow label="FastAPI REST API" value="Operational (Sync)" ok={true} />
+              <StatusRow label="Spatial Processing Engine" value="Operational (PostGIS)" ok={true} />
+              <StatusRow label="Conflict Detection Pipeline" value="Operational (GeoAI)" ok={true} />
             </div>
           </DropdownMenuContent>
         </DropdownMenu>
