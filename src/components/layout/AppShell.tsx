@@ -5,6 +5,7 @@ import { MobileTabBar } from "./MobileTabBar";
 import { CommandPalette } from "./CommandPalette";
 import { NotificationProvider } from "@/components/notifications/NotificationProvider";
 import { FloatingAIChatbot } from "@/components/ai/FloatingAIChatbot";
+import { FloatingPWAInstallNotification } from "@/components/common/FloatingPWAInstallNotification";
 
 export function AppShell({ children }: { children: ReactNode }) {
   const [commandOpen, setCommandOpen] = useState(false);
@@ -21,6 +22,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         </div>
         <MobileTabBar />
         <CommandPalette open={commandOpen} onOpenChange={setCommandOpen} />
+        <FloatingPWAInstallNotification />
         <FloatingAIChatbot />
       </div>
     </NotificationProvider>

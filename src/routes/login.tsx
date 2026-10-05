@@ -149,71 +149,57 @@ function LoginPage() {
           </div>
         </div>
 
-        {/* Right Demo Accounts Panel */}
-        <div className="md:col-span-5 bg-slate-900/60 border border-slate-800/60 backdrop-blur-md rounded-2xl p-6 flex flex-col justify-between">
+        {/* Right Single Admin Demo Account Panel */}
+        <div className="md:col-span-5 bg-slate-900/70 border border-slate-800/80 backdrop-blur-xl rounded-2xl p-6 flex flex-col justify-between shadow-2xl">
           <div>
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-xs font-bold tracking-wider text-teal-400 uppercase font-mono">Quick 1-Click Demo Login</h3>
+              <h3 className="text-xs font-bold tracking-wider text-teal-400 uppercase font-mono">⚡ 1-Click Instant Demo</h3>
               <span className="px-2 py-0.5 text-[10px] font-mono rounded bg-teal-500/10 border border-teal-500/30 text-teal-300 font-bold">
-                TEST CREDENTIALS
+                SUPER ADMIN
               </span>
             </div>
-            <p className="text-xs text-slate-400 mb-3">
-              Click any role below to pre-fill demo credentials and enter with that role:
+            
+            <p className="text-xs text-slate-300 mb-4 leading-relaxed">
+              Click below to authenticate as the <span className="text-teal-300 font-semibold">Chief Registrar & District Administrator</span> with complete access to all 3D Digital Twin, Harmonization, and Verification capabilities:
             </p>
 
-            <div className="space-y-2.5 max-h-[380px] overflow-y-auto pr-1">
-              {[
-                {
-                  label: "Senior Land Registrar",
-                  role: "ADMIN / REGISTRAR",
-                  email: "rajesh.kumar@bhoomitra.gov.in",
-                  pass: "admin123",
-                  desc: "Full verification authority, export access, and governance sign-off."
-                },
-                {
-                  label: "Geospatial GIS Analyst",
-                  role: "ANALYST",
-                  email: "vikram.mehta@bhoomitra.gov.in",
-                  pass: "analyst123",
-                  desc: "3D conflict investigation, spatial difference computation, and data ingestion."
-                },
-                {
-                  label: "Field Demarcation Surveyor",
-                  role: "SURVEYOR",
-                  email: "priya.sharma@bhoomitra.gov.in",
-                  pass: "surveyor123",
-                  desc: "Drone survey uploads, ground GNSS checkpoints, and boundary notes."
-                }
-              ].map((acc) => (
-                <button
-                  key={acc.email}
-                  type="button"
-                  onClick={() => handleDemoClick(acc.email, acc.pass)}
-                  disabled={isSubmitting}
-                  className="w-full text-left p-3 rounded-xl border border-slate-800 bg-slate-950/70 hover:bg-slate-800/80 hover:border-teal-500/50 transition group cursor-pointer"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-slate-200 group-hover:text-teal-300 transition">
-                      {acc.label}
-                    </span>
-                    <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300 group-hover:bg-teal-500/20 group-hover:text-teal-300">
-                      {acc.role}
-                    </span>
-                  </div>
-                  <div className="mt-1.5 flex items-center gap-2 text-[10px] font-mono text-teal-400">
-                    <span>{acc.email}</span>
-                    <span>•</span>
-                    <span className="text-slate-400">Pass: {acc.pass}</span>
-                  </div>
-                  <p className="text-[11px] text-slate-400 mt-1 line-clamp-1">{acc.desc}</p>
-                </button>
-              ))}
-            </div>
+            {/* Single Master Admin Button */}
+            <button
+              type="button"
+              onClick={() => handleDemoClick("rajesh.kumar@bhoomitra.gov.in", "admin123")}
+              disabled={isSubmitting}
+              className="w-full text-left p-4 rounded-xl border-2 border-teal-500/50 bg-gradient-to-br from-teal-950/50 via-slate-900/90 to-indigo-950/40 hover:border-teal-400 hover:from-teal-900/60 hover:to-indigo-900/50 transition-all duration-300 group cursor-pointer shadow-lg shadow-teal-950/50"
+            >
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm font-bold text-white group-hover:text-teal-300 transition flex items-center gap-2">
+                  <span className="h-2.5 w-2.5 rounded-full bg-teal-400 animate-pulse" />
+                  Rajesh Kumar
+                </span>
+                <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-400/30">
+                  CHIEF REGISTRAR / ADMIN
+                </span>
+              </div>
+              
+              <div className="flex flex-col gap-1 text-[11px] font-mono text-teal-300/90 bg-slate-950/60 p-2.5 rounded-lg border border-slate-800">
+                <div className="flex items-center justify-between">
+                  <span className="text-slate-400">ID:</span>
+                  <span className="text-slate-200">rajesh.kumar@bhoomitra.gov.in</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-slate-400">Pass:</span>
+                  <span className="text-slate-200">admin123</span>
+                </div>
+              </div>
+
+              <div className="mt-3 flex items-center justify-between text-xs font-semibold text-teal-400 group-hover:text-teal-300">
+                <span>Enter as Super Admin</span>
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </button>
           </div>
 
-          <div className="mt-4 pt-3 border-t border-slate-800/60 text-[11px] text-slate-500 text-center font-mono">
-            Clicking a role will auto-sign-in and open the intelligence workspace.
+          <div className="mt-6 pt-3 border-t border-slate-800/60 text-[11px] text-slate-400 text-center font-mono">
+            Full permissions: 3D GIS · Harmonization · Verified Records · Cryptographic Audit
           </div>
         </div>
 

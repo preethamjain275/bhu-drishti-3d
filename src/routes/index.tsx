@@ -38,8 +38,8 @@ import { BhuSetuLogo } from "@/components/brand/BhuSetuLogo";
 import { Button } from "@/components/ui/button";
 import { DemoDataNotice } from "@/components/common/TrustBadge";
 import { cn } from "@/lib/utils";
-import { CITY_BUILDINGS_CATALOG, CITY_PARCELS_CATALOG } from "@/lib/mock/threeD";
 import { BhooMitraHero } from "@/components/hero/BhooMitraHero";
+import { FloatingPWAInstallNotification } from "@/components/common/FloatingPWAInstallNotification";
 
 import { useAuth } from "@/lib/auth/AuthProvider";
 
@@ -300,6 +300,9 @@ function LandingPage() {
           </div>
         </div>
       </footer>
+
+      {/* Floating PWA Glassmorphism Notification */}
+      <FloatingPWAInstallNotification />
 
     </div>
   );
