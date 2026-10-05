@@ -6,6 +6,7 @@ import { BhuSetuLogo } from "@/components/brand/BhuSetuLogo";
 import { Animated3DHamburger } from "@/components/brand/Animated3DHamburger";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/lib/i18n/languageStore";
+import { PWAInstallButton } from "@/components/common/PWAInstallButton";
 
 /** Full navigation drawer for mobile / tablet. */
 export function MobileMenu({
@@ -102,6 +103,11 @@ export function MobileMenu({
               </ul>
             </div>
           ))}
+
+          {/* Mobile PWA Install Banner */}
+          <div className="pt-2 pb-4">
+            <PWAInstallButton variant="default" />
+          </div>
         </ScrollArea>
       </SheetContent>
     </Sheet>

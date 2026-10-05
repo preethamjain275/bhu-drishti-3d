@@ -4,6 +4,7 @@ import { useAuth } from "@/lib/auth/AuthProvider";
 import { DEMO_ACCOUNTS } from "@/lib/auth/types";
 import { Shield, Lock, Mail, ArrowRight, CheckCircle, Database, Server, Key } from "lucide-react";
 import { BhuSetuMark } from "@/components/brand/BhuSetuLogo";
+import { PWAInstallButton } from "@/components/common/PWAInstallButton";
 
 export const Route = createFileRoute("/login")({
   head: () => ({
@@ -136,13 +137,15 @@ function LoginPage() {
             </form>
           </div>
 
-          {/* System Status Footer */}
-          <div className="mt-8 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-500 font-mono">
+          {/* PWA Install & System Status Footer */}
+          <div className="mt-6 pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500 font-mono">
             <span className="flex items-center gap-1.5">
               <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
               System Status: Operational
             </span>
-            <span>AUTH_MODE: database</span>
+            <div className="w-full sm:w-auto">
+              <PWAInstallButton variant="compact" />
+            </div>
           </div>
         </div>
 

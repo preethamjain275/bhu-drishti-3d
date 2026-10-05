@@ -1,0 +1,36 @@
+{
+  "name": "Bhu-Drishti 3D — National Land Intelligence Platform",
+  "short_name": "BhuDrishti 3D",
+  "description": "AI-Powered Geospatial Harmonization, 3D Urban Cadastre & Digital Twin Land Intelligence Platform",
+  "start_url": "/overview",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#020617",
+  "theme_color": "#0f766e",
+  "categories": ["government", "productivity", "utilities", "navigation"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 192x192 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "3D Digital Twin",
+      "url": "/intelligence-3d",
+      "description": "Inspect 3D building cutaway & floor cadastre"
+    },
+    {
+      "name": "Conflict Intelligence",
+      "url": "/conflicts",
+      "description": "View spatial boundary overlaps & disputes"
+    },
+    {
+      "name": "Verified Land Records",
+      "url": "/records",
+      "description": "Access canonical verified land dossiers"
+    }
+  ]
+}

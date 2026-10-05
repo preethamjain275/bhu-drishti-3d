@@ -1,42 +1,10 @@
-# 🎙️ BhuSetu (Bhu-Drishti 3D) — Complete End-to-End Presentation Script
-
-> **Document Type:** Word-for-Word Spoken Presentation Script & Screen-by-Screen Walkthrough  
-> **Target Audience:** Evaluators, Technical Judges, Government Stakeholders, Urban Planners  
-> **Total Duration:** 10 – 15 Minutes (Adjustable with quick-skip markers)
-
----
-
-## 📑 Presentation Flow Overview
-
-| Step | Section / Screen | Route | Key Talking Point | Target Time |
-| :---: | :--- | :--- | :--- | :---: |
-| **0** | **The Hook & Problem Statement** | Landing / Intro | The Land Record Crisis in India & Multi-Department Silos | 1.5 min |
-| **1** | **Executive Intelligence Dashboard** | `/_app/overview` | High-level KPIs, Health Score, Risk Heatmaps | 1.5 min |
-| **2** | **Multi-Source Data Ingestion & CRS** | `/_app/data-sources` | Ingesting Shapefiles/GeoJSON & Auto CRS Reprojection | 1.0 min |
-| **3** | **2D Spatial Workspace & Map** | `/_app/map` | Multi-layer overlays (Revenue vs Municipal vs Survey) | 1.0 min |
-| **4** | **Advanced Spatial Query & Buffers** | `/_app/spatial-query` | Radius, Bounding Box, and Corridor intersection queries | 1.0 min |
-| **5** | **3D Digital Twin & Cutaway Explorer** | `/_app/intelligence-3d`| 3D Volumetric Cadastre, Floor & Room 4B Cutaways | 2.0 min |
-| **6** | **Harmonization Engine** | `/_app/harmonization` | IoU, Hausdorff geometry alignment, Candidate creation | 1.0 min |
-| **7** | **Entity Matching & Text Harmonization** | `/_app/entity-matching` | Fuzzy Levenshtein matching on Owner Names & Deed IDs | 1.0 min |
-| **8** | **Conflict Intelligence & Encroachment** | `/_app/conflicts` | Overlaps, Gaps, Slivers, Severity rating | 1.0 min |
-| **9** | **Evidence Graph & AI Investigator** | `/_app/evidence` | Multimodal Evidence synthesis + Natural Language Copilot | 1.5 min |
-| **10**| **Human-in-the-Loop Verification** | `/_app/verification` | Split-Screen Satellite vertex adjustment & checklist sign-off | 1.5 min |
-| **11**| **Verified Master Land Records** | `/_app/records` | The Single Source of Truth & Land Dossier | 1.0 min |
-| **12**| **Tamper-Evident Audit Ledger** | `/_app/audit` | Cryptographic event logs, Corrective event tracking | 1.0 min |
-| **13**| **Analytics, Revenue & Risk Hotspots**| `/_app/analytics` | Tax leakage detection & Ward dispute heatmaps | 1.0 min |
-| **14**| **Automated Reports & PDF Export** | `/_app/reports` | 1-click legal-grade PDF & GeoJSON inspection dossiers | 1.0 min |
-| **15**| **Settings & Role-Based Access Control**| `/_app/settings` | RBAC permissions & System config | 0.5 min |
-| **16**| **Conclusion & Final Impact Statement**| Summary | Why BhuSetu transforms urban governance | 1.0 min |
-
----
-
-## 🎬 STEP 0: The Hook & The Real Problem
+ 🎬 STEP 0: The Hook & The Real Problem
 
 ### 🖥️ Action:
 *Show the Landing Page / Title Slide.*
 
 ### 🗣️ What to Say (Word-for-Word):
-> *"Good morning respected judges, mentors, and fellow developers. Today, I am proud to present **BhuSetu** (Bhu-Drishti 3D)—an AI-Powered Geospatial Harmonization and 3D Urban Land Intelligence platform.*
+> *"Good morning respected judges, mentors, and fellow developers. Today, I am proud to present  (Bhu-Drishti 3D)—an AI-Powered Geospatial Harmonization and 3D Urban Land Intelligence platform.*
 >
 > *Let me start with a shocking fact:*  
 > ***Over 66% of all civil court cases in our country are land and property disputes.** It takes an average of **15 to 20 years** to resolve a single land boundary case.
@@ -291,24 +259,17 @@
 
 ---
 
-## 🎯 Anticipated Q&A Cheat Sheet (Win Every Question)
+🎯 Anticipated Q&A Cheat Sheet (Win Every Question)
 
-### ❓ Question 1: "How do you handle coordinate shifts between old surveys and modern GPS?"
+ ❓ Question 1: "How do you handle coordinate shifts between old surveys and modern GPS?"
 > **Answer:** *"Old cadastral surveys often used local datum or chain surveys without GPS reference. In BhuSetu, our backend uses GDAL and PROJ to reproject datasets into WGS84 (`EPSG:4326`), and our geometric alignment engine uses ground control points (GCPs) and affine transformations to align legacy survey maps with modern satellite basemaps."*
 
-### ❓ Question 2: "Can the AI make mistakes or hallucinate boundaries?"
+ ❓ Question 2: "Can the AI make mistakes or hallucinate boundaries?"
 > **Answer:** *"Crucially, the AI in BhuSetu is NEVER used to draw legal boundary coordinates autonomously. All spatial intersections, distances, and area calculations are performed by deterministic PostGIS and Shapely GIS engines. The AI is strictly an **explainability copilot**—it summarizes why two datasets disagree and suggests hypotheses. The final decision is 100% human-verified by authorized surveyors."*
 
-### ❓ Question 3: "Why is 3D Cadastre necessary when 2D maps already exist?"
+❓ Question 3: "Why is 3D Cadastre necessary when 2D maps already exist?"
 > **Answer:** *"In modern cities, land development is vertical. If a 10-story building is constructed on a 500 sq.meter plot, 2D records only capture the ground footprint, completely failing to represent multi-owner apartment ownership, air rights, and illegal floor additions. Our 3D Digital Twin provides floor-by-floor and room-by-room cadastral governance."*
 
-### ❓ Question 4: "Is this platform ready to integrate with government systems?"
+ ❓ Question 4: "Is this platform ready to integrate with government systems?"
 > **Answer:** *"Yes! BhuSetu is built with open standards. It ingests and exports standard Shapefiles, GeoJSON, and WMS/WFS map services, making it fully interoperable with national initiatives like Digital India Land Records Modernization Programme (DILRMP), PM Gati Shakti, and Bhu-Naksha."*
 
----
-
-<div align="center">
-
-### 🌟 **Good luck with your presentation tomorrow! You're going to ace it!** 🚀
-
-</div>

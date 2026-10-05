@@ -15,6 +15,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { MobileMenu } from "./MobileMenu";
+import { PWAInstallButton } from "@/components/common/PWAInstallButton";
 import {
   subscribeApiConnectionStatus,
   subscribeHealthStatus,
@@ -190,6 +191,11 @@ export function TopBar({ onOpenCommand }: { onOpenCommand: () => void }) {
               </React.Fragment>
             );
           })}
+        </div>
+
+        {/* PWA Install Button */}
+        <div className="hidden sm:block">
+          <PWAInstallButton variant="compact" />
         </div>
 
         {/* Global Drone View Quick Link / Toggle */}
