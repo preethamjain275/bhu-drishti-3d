@@ -22,10 +22,12 @@
   <body class="bg-background text-foreground antialiased selection:bg-teal-500/30 selection:text-teal-200">
     <div id="root"></div>
     <script>
-      // Register Service Worker for PWA
+      // Register Service Worker for PWA with live update check
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch((err) => {
+          navigator.serviceWorker.register('/sw.js').then((reg) => {
+            reg.update();
+          }).catch((err) => {
             console.debug('SW registration skipped:', err);
           });
         });
